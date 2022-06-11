@@ -3,7 +3,7 @@ Most implementations of RTP or RTSP have a few seconds of delay. This is unaccep
 
 This minimal code shows how to: 
 - read a webcam
-- convert each frame to packets with a minimal application header
+- convert each frame to packets with a minimal application header (inspired by RTP/RTSP)
 - initialize a connection
 - send and then reassemble the packets in order
 - manage a frame buffer and discard partial older frames (in case of packet loss) 
