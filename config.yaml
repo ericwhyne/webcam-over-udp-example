@@ -2,5 +2,5 @@
 server_ip: "127.0.0.1"
 server_video_port: 44602 # 44601-44817 is unassigned according to IANA.org
 client_video_port: 44603
-udp_buffer_size: 9000
+udp_buffer_size: 9000 # OSX has a default limit of 9216 for UDP packets, max for UDP is 65507
 cam_size: [640,480]

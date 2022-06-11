@@ -10,8 +10,7 @@ import numpy as np
 config = yaml.safe_load(open("config.yaml"))
 
 def bytesToPackets(bytes, etimesec):
-    #max_payload_bytes = 65000 # packets will be this big plus 26 bytes of our header
-    max_payload_bytes = config["udp_buffer_size"] # OSX has limit of 9216 for UDP packets
+    max_payload_bytes = config["udp_buffer_size"] # packets will be this big plus the bytes of our header which is under 30 bytes (depending on OS clock accuracy)
     size = len(bytes) # measure size of the bytes to be transmitted
     num_of_segments = math.ceil(size/max_payload_bytes) # calculate how many packets we need to trasnport it
     array_pos_start = 0 # used to track our position as we traverse the bytes
