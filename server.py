@@ -9,7 +9,7 @@ import numpy as np
 
 config = yaml.safe_load(open("config.yaml"))
 
-def bytesToPackets(bytes, etimesec):# used
+def bytesToPackets(bytes, etimesec):
     #max_payload_bytes = 65000 # packets will be this big plus 26 bytes of our header
     max_payload_bytes = config["udp_buffer_size"] # OSX has limit of 9216 for UDP packets
     size = len(bytes) # measure size of the bytes to be transmitted
@@ -32,7 +32,6 @@ def bytesToPackets(bytes, etimesec):# used
 send_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # create socket we'll send video over
 init_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # create socket for client address discovery
 init_sock.bind(('', config["server_video_port"])) # bind to the init socket on all host interfaces
-
 
 client_address = "" # we'll store the client address here
 while client_address == "": # wait for a client to connect so we can get their address
