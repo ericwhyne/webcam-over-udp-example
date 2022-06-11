@@ -1,5 +1,5 @@
 # webcam-over-udp-example
-Most implementations of RTP or RTSP have a few seconds of delay. This is unacceptable when using them as part of robotics remote control projects.
+Most implementations of RTP or RTSP have a few seconds of delay. This is unacceptable when using them as part of robotics remote control projects. This project shows how to avoid that delay. 
 
 This minimal code shows how to: 
 - read a webcam
