@@ -9,5 +9,5 @@ This minimal code shows how to:
 - manage a frame buffer and discard partial older frames (in case of packet loss) 
 - view the image on client side
 
-This is accomplished with as little delay as possible using IP packet networking via UDP. It's possible to tune this further by chancing host packet size limitations, camera size, and compression styles.  
+This is accomplished with as little delay as possible using IP packet networking via UDP. It's possible to tune this further by changing host packet size limitations, camera size, and compression styles.  
 
